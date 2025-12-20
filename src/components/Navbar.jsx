@@ -1,11 +1,11 @@
 export default function Navbar() {
     return (
-        <nav className="w-w-full bg-slate-900 text-white shadow-md"> 
-            <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 className="text-xl font-bold text-cyan-400">
+        <nav className="navbar navbar-dark bg-dark"> 
+            <div className="container">
+                <h1 className="navbar-brand fw-bold">
                     Job Tracker
                 </h1>
-            <span className="text-sm text-slate-300">
+            <span className="text-light small">
                 React+ tailwind
             </span>
             </div>

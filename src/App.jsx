@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import JobForm from './components/JobForm'
 
 export default function App() {
   return ( 
@@ -8,6 +9,7 @@ export default function App() {
         <h2 className='text-2xl font-semibold text-slate-800'>
           Welcome to the Job Tracker App
         </h2>
+        <JobForm />
         <p className='text-slate-600 mt-2'>
           Track your job applications efficiently.
         </p>
