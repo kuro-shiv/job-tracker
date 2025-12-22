@@ -3,10 +3,10 @@ export default function Navbar() {
         <nav className="navbar navbar-dark bg-dark"> 
             <div className="container">
                 <h1 className="navbar-brand fw-bold">
-                    Job Tracker
+                   Chivi Job Board
                 </h1>
             <span className="text-light small">
-                React+ tailwind
+                NextGen Connect App
             </span>
             </div>
 
