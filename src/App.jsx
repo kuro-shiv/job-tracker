@@ -1,35 +1,39 @@
 import { useEffect, useState } from "react"
-import Navbar from './components/Navbar'
-import JobForm from './components/JobForm'
-import JobList from './components/JobList'
-
+import Navbar from "./components/Navbar"
+import JobForm from "./components/JobForm"
+import JobList from "./components/JobList"
 
 export default function App() {
-  const [jobs, setjobs] = usestate(() =>{
+  const [jobs, setJobs] = useState(() => {
     const saved = localStorage.getItem("jobs")
-    return saved ? JSON.prase(saved) : []
-
-  }) 
+    return saved ? JSON.parse(saved) : []
+  })
 
   function addJob(job) {
-    setjobs([...jobs, jobs])
+    setJobs([...jobs, job])
   }
-  
-  return ( 
-    <div className='min-h-screen bg-slate-100'>
+
+  function deleteJob(id) {
+    setJobs(jobs.filter((job) => job.id !== id))
+  }
+
+  useEffect(() => {
+    localStorage.setItem("jobs", JSON.stringify(jobs))
+  }, [jobs])
+
+  return (
+    <>
       <Navbar />
-      <main className='max-w-6xl mx-auto px-4 py-6'>
-        <h2 className='text-2xl font-semibold text-slate-800'>
-          Welcome to the Job Tracker App
-        </h2>
-        <p class-name = "text -mute">
-          Track and connect
-        </p>
-        <JobForm />
-        <p className='text-slate-600 mt-2'>
+
+      <div className="container mt-4">
+        <h2 className="fw-bold">Welcome to the Job Tracker App</h2>
+        <p className="text-muted">
           Track your job applications efficiently.
         </p>
-      </main> 
-    </div>
+
+        <JobForm onAddJob={addJob} />
+        <JobList jobs={jobs} onDelete={deleteJob} />
+      </div>
+    </>
   )
 }

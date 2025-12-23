@@ -1,4 +1,4 @@
-export default function jobList({Jobs, onDelete}) {
+export default function jobList({Jobs = [], onDelete}) {
     if (Jobs.length === 0) {
         return (
             <p className = "text-center mt-4">
@@ -16,7 +16,9 @@ export default function jobList({Jobs, onDelete}) {
                             <p className="mb-1"> {job.role} </p>
                             <sapn 
                             className ={`badge ${
-                                job.status === "Applied"
+                                job.status === "Select status"
+                                ? "bg-primary"
+                                : job.status === "Applied"
                                 ? "bg-secondary" 
                                 : job.status === "Interview"
                                 ? "bg-warning text-dark"
