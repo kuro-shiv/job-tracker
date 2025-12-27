@@ -1,9 +1,16 @@
-import { useState } from "react"
-
-export default function JobForm({ onAddJob }) {
+import { useState, useEffect } from "react"
+export default function JobForm({ onAddJob, selectedJob, onUpdateJob }) {
   const [company, setCompany] = useState("")
   const [role, setRole] = useState("")
   const [status, setStatus] = useState("Applied")
+
+   useEffect(() => {
+    if (selectedJob){
+      setCompany(selectedJob.company)
+      setRole (selectedJob.role)
+      setStatus (selectedJob.status)
+    }
+  }, [selectedJob])
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -13,7 +20,20 @@ export default function JobForm({ onAddJob }) {
       company,
       role,
       status,
+      id: selectedJob ? selectedJob.id : Date.now(),
     }
+    if (selectedJob){
+      onUpdateJob(job)
+    }
+    else {
+        onAddJob(job)
+      }
+    
+
+    setCompany("")
+    setRole("")
+    setStatus("Applied")  
+
 
     onAddJob(job)
 

@@ -1,4 +1,4 @@
-export default function jobList({Jobs = [], onDelete}) {
+export default function jobList({Jobs = [], onDelete, onEdit}) {
     if (Jobs.length === 0) {
         return (
             <p className = "text-center mt-4">
@@ -31,12 +31,18 @@ export default function jobList({Jobs = [], onDelete}) {
                             </sapn>
                         </div>
 
-                        <button
-                        classNaame="btn btn-outline-danger btn-sm"
-                        onClick={()=> onDelete(job.id)}
-                        >
-                            Delete
-                        </button>
+                        <div className= "d-flex gap-3">
+                            <button className="btn btn-outline-primary btn-sm"
+                            onClick={() => onEdit(job)}
+                            >
+                                Edit
+                            </button>
+                            <button className="btn btn-outline-danger btn-sm"
+                            onClick={() => onDelete(job.id)}
+                            >   
+                                Delete
+                            </button>
+                        </div>
                     </div>
         </div>
             ))}
