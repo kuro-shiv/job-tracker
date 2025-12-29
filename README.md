@@ -29,11 +29,6 @@ A web application to help users track their job applications with features like 
 
 ---
 
-## 📸 Screenshot
-
-> *Add screenshot of your app UI here*  
-(Example: Home Screen showcasing job list & search bar)
-
 
 ## ⚙️ Installation & Setup
 
@@ -58,10 +53,6 @@ npm run dev
 
 Pull requests are welcome!
 Feel free to open issues to propose new features or report bugs.
-
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 Shivam Kumar Dubey
