@@ -1,80 +1,67 @@
-# 📌 About the Job Tracker Project
+# 🧾 Job Application Tracker – React
 
-The Job Tracker is a web-based application designed to help users efficiently manage and track their job applications in one place. Instead of manually remembering application statuses, follow-ups, or company details, this project provides a structured and user-friendly solution to organize the entire job search process.
+A web application to help users track their job applications with features like search, filtering, editing, and persistence. Designed with a clean UI using React and Bootstrap.
 
-This project focuses on improving productivity for job seekers by allowing them to add, update, and monitor job applications with ease. It is especially useful for students, freshers, and professionals applying to multiple companies simultaneously.
+---
 
-# 🎯 Purpose of the Project
+## 🚀 Features
 
-The main goal of this project is to:
+✔ Add Job Applications  
+✔ Edit Job Details  
+✔ Delete Applications  
+✔ Search by Company Name  
+✔ Filter by Application Status  
+✔ Persistent Storage using LocalStorage  
+✔ Component-Based Architecture using React  
+✔ Bootstrap UI Styling  
 
-Simplify job application tracking
+---
 
-Reduce confusion around application status and follow-ups
+## 🛠 Tech Stack
 
-Provide a centralized dashboard for job search progress
+| Technology | Purpose |
+|-----------|---------|
+| React | UI Framework |
+| Bootstrap | Styling & Layout |
+| JavaScript (ES6+) | Core Language |
+| LocalStorage | Data Persistence |
+| Vite | Development & Bundling |
 
-This project also serves as a hands-on learning experience to strengthen frontend development skills and understand real-world application workflows.
+---
 
-# ⚙️ Key Features
+## 📸 Screenshot
 
-### ➕ Add new job applications
+> *Add screenshot of your app UI here*  
+(Example: Home Screen showcasing job list & search bar)
 
-### ✏️ Edit and update application details
 
-### 📊 Track application status (Applied, Interview, Selected, Rejected, etc.)
+## ⚙️ Installation & Setup
 
-### 🗑️ Delete applications when no longer needed
+Clone the repository:
+```bash
+git clone https://github.com/yourusername/job-tracker.git
+cd job-tracker
 
-### 📱 Responsive and clean UI for better user experience
+npm install
+npm run dev
+```
 
-# 🛠️ Tech Stack Used
+## ✨ Future Enhancements (Roadmap)
 
-Frontend: React.js
+🔹 Dashboard & Analytics View
+🔹 Dark/Light Mode Toggle
+🔹 Export Job List to CSV & JSON
+🔹 Authentication & Backend Integration
+🔹 Deployment to Vercel / Netlify
 
-Styling: Tailwind CSS
+## 🤝 Contributing
 
-Build Tool: Vite
+Pull requests are welcome!
+Feel free to open issues to propose new features or report bugs.
 
-Language: JavaScript (ES6+)
+## 📜 License
 
-# 🚀 Learning Outcomes
+This project is licensed under the MIT License.
 
-Through this project, I gained practical experience in:
-
-Component-based architecture in React
-
-State management and props handling
-
-UI design using utility-first CSS (Tailwind)
-
-Debugging and fixing real-world frontend issues
-
-Structuring a scalable React project
-
-### 🔮 Future Enhancements (Planned)
-
-### 🔐 User authentication
-
-### 💾 Backend integration with database
-
-### 🔔 Reminder notifications for follow-ups
-
-### 📈 Analytics dashboard for application insights
-
-## React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨‍💻 Author
+Shivam Kumar Dubey
