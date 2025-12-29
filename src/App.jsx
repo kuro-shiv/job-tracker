@@ -12,13 +12,28 @@ export default function App() {
 
   const [statusFilter, setStatusFilter] = useState("All")
   const [search, setSearch] = useState("")
+  const [selectedJob, setSelectedJob] = useState(null)
 
   function addJob(job) {
     setJobs([...jobs, job])
+    setSelectedJob(null)
   }
 
   function deleteJob(id) {
     setJobs(jobs.filter((job) => job.id !== id))
+  }
+
+  function startEdit(job) {
+    setSelectedJob(job)
+  }
+
+  function updateJob(updatedJob) {
+    setJobs(
+      jobs.map((job) =>
+        job.id === updatedJob.id ? updatedJob : job
+      )
+    )
+    setSelectedJob(null)
   }
 
   useEffect(() => {
@@ -45,16 +60,28 @@ export default function App() {
           Track, filter, and manage your job applications.
         </p>
 
-        <JobForm onAddJob={addJob} />
-<br></br>
+        <JobForm
+          onAddJob={addJob}
+          selectedJob={selectedJob}
+          onUpdateJob={updateJob}
+        />
+
+        <div className="my-3"></div>
+
         <Filter
           statusFilter={statusFilter}
           setStatusFilter={setStatusFilter}
           search={search}
           setSearch={setSearch}
         />
-<br></br>
-        <JobList jobs={filteredJobs} onDelete={deleteJob} />
+
+        <div className="my-3"></div>
+
+        <JobList
+          jobs={filteredJobs}
+          onDelete={deleteJob}
+          onEdit={startEdit}
+        />
       </div>
     </>
   )
